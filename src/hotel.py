@@ -318,24 +318,24 @@ class Hotel:
 
     @property
     def current_luxury_total_earnings(self):
-        return sum((room.total_earnings for room in self._luxury_rooms))
+        return round(sum((room.total_earnings for room in self._luxury_rooms)), 1)
 
     @property
     def current_junior_total_earnings(self):
-        return sum((room.total_earnings for room in self._junior_suites))
+        return round(sum((room.total_earnings for room in self._junior_suites)))
     
     @property
     def current_double_total_earnings(self):
-        return sum((room.total_earnings for room in self._double_rooms))
+        return round(sum((room.total_earnings for room in self._double_rooms)))
     
     @property
     def current_single_total_earnings(self):
-        return sum((room.total_earnings for room in self._single_rooms))
+        return round(sum((room.total_earnings for room in self._single_rooms)))
     
     @property
     def current_hotel_total_earnings(self):
         all_rooms = self._luxury_rooms + self._junior_suites + self._double_rooms + self._single_rooms
-        return sum((room.total_earnings for room in all_rooms))
+        return round(sum((room.total_earnings for room in all_rooms)))
     
 
     @property

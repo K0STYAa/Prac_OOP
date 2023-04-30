@@ -32,7 +32,7 @@ class Room:
     
     @property
     def total_earnings(self):
-        return self._total_earnings
+        return round(self._total_earnings, 1)
     
     def receive_guest(self, new_guest: Guest) -> bool:
         """Check if the room is available"""
